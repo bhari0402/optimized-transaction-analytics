@@ -1,0 +1,63 @@
+Initially trained a Random Forest model.
+
+Observed class imbalance due to low fraud occurrence.
+
+Applied SMOTE oversampling to balance classes.
+
+Compared Random Forest and XGBoost models.
+
+Selected XGBoost because it achieved 87% fraud recall and reduced missed fraud cases from 10 to 3.
+
+Training Rows: 80000
+Testing Rows: 20000
+
+Applying SMOTE...
+Before SMOTE:
+isFraud
+0    79907
+1       93
+Name: count, dtype: int64
+
+After SMOTE:
+isFraud
+0    79907
+1    79907
+Name: count, dtype: int64
+
+Training Random Forest...
+
+Random Forest Report
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     19977
+           1       0.16      0.57      0.25        23
+
+    accuracy                           1.00     20000
+   macro avg       0.58      0.78      0.62     20000
+weighted avg       1.00      1.00      1.00     20000
+
+
+Random Forest Confusion Matrix
+[[19909    68]
+ [   10    13]]
+
+Random Forest Model Saved
+
+Training XGBoost...
+
+XGBoost Report
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      1.00     19977
+           1       0.12      0.87      0.21        23
+
+    accuracy                           0.99     20000
+   macro avg       0.56      0.93      0.60     20000
+weighted avg       1.00      0.99      1.00     20000
+
+
+XGBoost Confusion Matrix
+[[19830   147]
+ [    3    20]]
+
+XGBoost Model Saved

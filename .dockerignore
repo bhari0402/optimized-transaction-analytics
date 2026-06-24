@@ -1,0 +1,15 @@
+venv/
+.git/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+
+data/
+datasets/
+
+.env
+
+Dockerfile.old
+
+notebooks/
