@@ -67,10 +67,9 @@ Transaction Dataset
         ▼
      FastAPI Backend
         │
- ┌──────┼────────┐
- ▼      ▼        ▼
+ 
 KPIs  Fraud API Dashboard
-```
+
 
 ---
 
